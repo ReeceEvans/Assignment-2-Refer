@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    min-width: 320px;
+    max-width: 1400px;
+    max-height: 100%;
+    margin: 0 auto;
+    background-color: black;
+    font-family: "helvetica neue", bold, italic;
+}
+
+.row{
+    padding: 5px;
+    width: 100%;
+    min-height: 1px;
+    float: left;
+}
+
+.row1{
+    padding: 0px;
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    text-align: center;
+}
+
+.col{
+    background: black;
+    min-height: 40px;
+    border-radius: 8px;
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    display:inline-block;
+    float: left;
+    color: white;
+}
+
+.col:first-child{margin-left: 0px;}
+
+.col:last-child{margin-right: 0px;}
+
+.col.one{width: 3.93%;}
+.col.two{width: 12.66%;}
+.col.three{width: 21.4%;}
+.col.four{width: 30.13%;}
+.col.five{width: 38.867%;}
+.col.six{width: 47.6%;}
+.col.seven{width: 56.333%;}
+.col.eight{width: 65.07%;}
+.col.nine{width: 73.8%;}
+.col.ten{width: 82.533%;}
+.col.eleven{width: 91.27%;}
+.col.twelve{width: 100%;}
+
+h2 {
+    
+    font-size: 3vw;
+    color: white;
+    font-family: "helvetica neue", bold, italic;
+    text-align: center;
+    max-width: 100%;
+    line-height: 10px;
+}
+
+h3 {
+    
+    margin: 10px 20px 0px 20px;
+    
+    
+}
+
+p {
+    
+    margin: 10px 20px 20px 20px;
+    
+}
+
+img {
+    
+    max-width: 100%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+.nav {
+    border-bottom: 1px solid black;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+.menu {
+    margin: 0px;
+    text-align: center;
+}
+.menu a {
+    clear: left;
+    text-decoration: none;
+    color: lightgrey;
+    margin: 0 25px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: ghostwhite;
+    color: black;
+}
+
+.menu a:active {
+    background-color: deeppink;
+    color: greenyellow;
+}
+
+span {
+    color: orangered;
+}
+
+label {
+    margin: 0 40px 0 20px;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: left;
+    color: lightgray;
+}
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+    
+    
+}
+
+@media (max-width: 768px){
+    
+    .col{
+        width: 100% !important;
+        margin: 5px 0px 5px 0px;
+    }
+}
+
+
+
+/* Responsive Images */
+
+.row {
+    display: -ms-flexbox; /* Internet Explorer */
+    -ms-flex-wrap: wrap; /* Internet Explorer */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Creates four equal coloums to hold the images */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    -ms-flex: 25%; /* Internet Explorer */
+}
+
+/* Controls the gap in below images */ 
+.column img {
+    margin-top: 12px;
+    vertical-align: middle;
+}
+
+/* changes four column layout to two column for responsive devices */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+        -ms-flex: 50%;
+    }
+}
+
+/* changes four column layout to two column and stacks them on top rather than next to each other for responsive devices */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        -ms-flex: 100%;
+    }
+}
